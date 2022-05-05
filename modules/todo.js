@@ -5,17 +5,17 @@ class Todo {
     this.index = index;
   }
 
-  add = (todo, todosArr) => {
+  static add = (todo, todosArr) => {
     todosArr.push(todo);
     localStorage.setItem('todos', JSON.stringify(todosArr));
   }
 
-  remove = (index, todosArr) => {
+  static remove = (index, todosArr) => {
     todosArr.splice(index, 1);
     localStorage.setItem('todos', JSON.stringify(todosArr));
   }
 
-  update = (arr) => {
+  static update = (arr) => {
     localStorage.setItem('todos', JSON.stringify(arr));
   }
 }
